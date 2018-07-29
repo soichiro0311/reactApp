@@ -5,6 +5,7 @@ import './index.css';
 import MoneyBook from './MoneyBook';
 import Game from './game';
 import registerServiceWorker from './registerServiceWorker';
+import Calculator from './Calculator';
 
 
 class Index extends React.Component {
@@ -12,12 +13,14 @@ class Index extends React.Component {
     return (
       <BrowserRouter>
         <div>
-          <p>
-            <Link to="/game">Game</Link>&nbsp;
-            <Link to="/money">MoneyBook</Link>&nbsp;
-          </p>
+          <ul>
+            <li><Link to="/game">Game</Link></li>
+            <li><Link to="/money">MoneyBook</Link></li>
+            <li><Link to="/calc">Calculator</Link></li>
+          </ul>
           <Route exact path='/game' component={Game} />
           <Route exact path='/money' component={MoneyBook} />
+          <Route exact path='/calc' component={Calculator} />
         </div>
       </BrowserRouter>
     )
